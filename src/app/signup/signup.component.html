@@ -1,0 +1,26 @@
+<div class="container-fluid wrapper">
+  <div class="container cont">
+    <div class="card whol">
+      <div class="text">
+        <h1>Sign Up</h1>
+        <h5>Please fill your details</h5>
+      </div>
+          <form [formGroup]="userSignupForm" (ngSubmit)="signUp()">
+            <div class="form-group">
+              <input formControlName="fullname" type="text" class="form-control" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <input formControlName="phone" type="number" class="form-control" placeholder="Mobile number">
+            </div>
+              <div class="form-group">
+                <input formControlName="email" type="email" class="form-control" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <input formControlName="password" type="password" class="form-control" placeholder="Password">
+              </div>
+              <button (click)="signUp()" type="submit" class="btn btn-danger">Sign Up</button>
+          </form>
+        <a style="color: red; margin-top: .3rem; margin-left: 3rem; text-decoration: none;" routerLink="/">Already have an account? Login </a>
+    </div>
+  </div>
+</div>

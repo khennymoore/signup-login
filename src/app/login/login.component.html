@@ -1,0 +1,22 @@
+<div class="container-fluid wrapper">
+  <div class="container cont">
+    <div class="card whol">
+      <div class="text">
+        <h1>Login</h1>
+        <h6 style="margin-top: 2rem;">Please provide your registered details to login to your dashboard</h6>
+      </div>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="form-group">
+              <input formControlName="email" type="email" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <input formControlName="password" type="password" class="form-control" placeholder="Password">
+            </div>
+            <a href="#" style="margin-left: 14rem; color: red;" >forgot password ?</a>
+
+            <button type="submit" class="btn btn-danger">Login</button>
+        </form>
+        <a style="color: red; margin-top: 1rem; margin-left: 2.5rem; text-decoration: none;" routerLink="/signup">Don't have an account ? sign up </a>
+    </div>
+  </div>
+</div>
